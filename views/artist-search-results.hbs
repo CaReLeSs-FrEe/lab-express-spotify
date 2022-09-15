@@ -7,9 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+  
     <ul>
-        {{#each Artist}}
-            <li><img src={{this.image_url}}> *{{this.name}} *{{this.description}}</li> 
+        {{#each artist}}
+            <li><img src={{this.image}}> *{{this.name}} *<a href="/albums/{{this.artistId}}?artistName={{this.name}}">View Albums</a></li> 
         {{else}}
             <p>No artists yet!</p>
         {{/each}}
